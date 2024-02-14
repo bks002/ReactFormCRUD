@@ -16,10 +16,12 @@ function App() {
   const onSubmit =(event)=>
   { 
     event.preventDefault();
-    if(updateButton)
+    if(name=="" || address==""){
+      alert("All the fields are mandatory");
+    }
+    else if(updateButton)
     {
-
-      console.log(editIndex);
+       console.log(editIndex);
       details.splice((editIndex),1,{Name:name,Address:address})
       setUpdateButton(false);
       
